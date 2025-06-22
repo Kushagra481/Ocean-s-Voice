@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐋 Whale Emotion Classifier - Ocean's Voice</title>
+    <link rel="stylesheet" href="static\styles.css">
+</head>
+<body>
+    <!-- Floating Background Whales -->
+    <div class="floating-whales">
+        <div class="whale-float">🐋</div>
+        <div class="whale-float">🐳</div>
+        <div class="whale-float">🐋</div>
+        <div class="whale-float">🐳</div>
+    </div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>🐋 Ocean's Voice</h1>
+            <p class="subtitle">Advanced Whale Emotion Classifier - Decode the Language of the Deep</p>
+            <p>Upload a whale sound spectrogram and discover the emotional state of these magnificent ocean giants</p>
+        </div>
+
+        <!-- File Upload Section -->
+        <div class="upload-section">
+            <div class="file-upload">
+                <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.gif,.bmp,.tiff">
+                <label for="fileInput" class="file-upload-label">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+                    <div>Drop your whale spectrogram here or click to browse</div>
+                    <div style="font-size: 0.9rem; opacity: 0.8; margin-top: 1rem;">Supported formats: PNG, JPG, GIF</div>
+                </label>
+            </div>
+            <div style="text-align: center;">
+                <button class="analyze-btn" onclick="analyzeEmotion()">🔍 Analyze Whale Emotion</button>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div class="result-section" id="resultSection">
+            <h2>🎵 Analysis Complete!</h2>
+            <div class="emotion-result" id="emotionResult">Detected Emotion: Happy & Playful</div>
+            <p>This whale appears to be in a joyful state, likely engaging in social communication with its pod.</p>
+        </div>
+
+        <!-- Facts Carousel Section -->
+        <div class="facts-carousel">
+            <h2>🌊 Amazing Whale Facts</h2>
+            <div class="fact-container">
+                <div class="fact-item active" id="fact-0">
+                    Blue whales are the largest animals ever known to exist on Earth, with hearts alone weighing as much as an automobile and tongues weighing as much as an elephant.
+                </div>
+                <div class="fact-item" id="fact-1">
+                    Humpback whales create complex songs that can last up to 30 minutes and travel over 1,000 miles through the ocean, with each population having its own unique dialect.
+                </div>
+                <div class="fact-item" id="fact-2">
+                    Sperm whales have the largest brain of any creature known to have lived on Earth, weighing up to 17 pounds and containing over 200 billion neurons.
+                </div>
+                <div class="fact-item" id="fact-3">
+                    Some whales can hold their breath for over 2 hours and dive to depths of over 7,000 feet, withstanding pressure that would crush most other living beings.
+                </div>
+                <div class="fact-item" id="fact-4">
+                    Whale songs can be heard from over 1,000 miles away, and scientists believe they use these vocalizations for navigation, mating calls, and social bonding.
+                </div>
+                <div class="fact-item" id="fact-5">
+                    Gray whales make one of the longest migrations of any mammal, traveling up to 14,000 miles round trip between feeding and breeding grounds.
+                </div>
+            </div>
+            <div class="fact-controls">
+                <button class="fact-btn" onclick="previousFact()">← Previous</button>
+                <button class="fact-btn" onclick="nextFact()">Next →</button>
+                <button class="fact-btn" onclick="randomFact()">🎲 Random</button>
+            </div>
+        </div>
+
+        <!-- Whale Species Gallery -->
+        <div class="whale-gallery">
+            <div class="whale-card">
+                <span class="whale-emoji">🐋</span>
+                <h3>Blue Whale</h3>
+                <p>The largest animal on Earth, blue whales can reach lengths of up to 100 feet and weigh as much as 200 tons. Their calls can be heard from hundreds of miles away.</p>
+            </div>
+            <div class="whale-card">
+                <span class="whale-emoji">🐳</span>
+                <h3>Humpback Whale</h3>
+                <p>Known for their complex songs and acrobatic breaching behavior, humpback whales are among the most studied and beloved marine mammals.</p>
+            </div>
+            <div class="whale-card">
+                <span class="whale-emoji">🐋</span>
+                <h3>Sperm Whale</h3>
+                <p>Deep-diving champions with the largest brain in the animal kingdom, sperm whales can dive to incredible depths in search of giant squid.</p>
+            </div>
+            <div class="whale-card">
+                <span class="whale-emoji">🐳</span>
+                <h3>Orca (Killer Whale)</h3>
+                <p>Highly intelligent apex predators with complex social structures, orcas are actually the largest members of the dolphin family.</p>
+            </div>
+            <div class="whale-card">
+                <span class="whale-emoji">🐋</span>
+                <h3>Gray Whale</h3>
+                <p>Marathon migrants of the ocean, gray whales travel thousands of miles between feeding and breeding grounds in one of nature's greatest journeys.</p>
+            </div>
+            <div class="whale-card">
+                <span class="whale-emoji">🐳</span>
+                <h3>Beluga Whale</h3>
+                <p>Known as the "canaries of the sea" for their vocal abilities, beluga whales have expressive faces and can change the shape of their heads.</p>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number">89</div>
+                <div class="stat-label">Whale Species</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">200</div>
+                <div class="stat-label">Tons (Blue Whale)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">7,000</div>
+                <div class="stat-label">Feet Deep Dives</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">14,000</div>
+                <div class="stat-label">Miles Migration</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
